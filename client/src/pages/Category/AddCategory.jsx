@@ -10,6 +10,7 @@ import slugify from 'slugify'
 import { showToast } from '@/helpers/showToast'
 import { getEvn } from '@/helpers/getEnv'
 
+
 const AddCategory = () => {
 
     const formSchema = z.object({
@@ -25,8 +26,6 @@ const AddCategory = () => {
         },
     })
 
-
-
     const categoryName = form.watch('name')
 
     useEffect(() => {
@@ -38,7 +37,8 @@ const AddCategory = () => {
 
     async function onSubmit(values) {
         try {
-            const response = await fetch(`${getEvn('VITE_API_BASE_URL')}/category/add`, {
+            const response = await fetch(`${getEvn('VITE_API_BASE_URL')}/category/add`, 
+            {
                 method: 'post',
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify(values)
