@@ -1,0 +1,7 @@
+firebase:- 		google login
+email/blog:-		mongodb
+cloudnary:- 	profile
+multer :-		for parse the data inside backend
+slugify:		auto convert uper text in bottom text
+stringify:
+blog 
